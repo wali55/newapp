@@ -13,10 +13,17 @@ export default function FancyCard() {
           style={styles.cardImage}
         />
         <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>Cox's Bazar</Text>
-            <Text style={styles.cardLocation}>Chittagong</Text>
-            <Text style={styles.cardDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore possimus sint eaque delectus aspernatur cumque repellat sapiente explicabo repudiandae accusamus!</Text>
-            <Text style={styles.cardFooter}>12 minutes away</Text>
+          <Text style={styles.cardTitle}>Cox's Bazar</Text>
+          <Text style={styles.cardLocation}>Chittagong</Text>
+          <Text style={styles.cardDescription}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            possimus sint eaque delectus aspernatur cumque repellat sapiente
+            explicabo repudiandae accusamus!
+          </Text>
+          <View style={styles.cardFooter}>
+            <Text>12 minutes away</Text>
+            <Text>12 minutes away</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -29,14 +36,48 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 8,
   },
-  card: {},
-  cardElevated: {},
-  cardImage: {
-    height: 250
+  card: {
+    width: 350,
+    height: 420,
+    marginHorizontal: 16,
+    marginVertical: 12,
+    borderRadius: 6,
   },
-  cardBody: {},
-  cardTitle: {},
-  cardLocation: {},
-  cardDescription: {},
-  cardFooter: {},
+  cardElevated: {
+    backgroundColor: '#EEEEEE',
+    elevation: 2,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
+  cardImage: {
+    height: 250,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
+    resizeMode: 'cover',
+  },
+  cardBody: {
+    padding: 12,
+    flex: 1,
+    flexGrow: 1,
+  },
+  cardTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  cardLocation: {
+    fontSize: 14,
+    marginBottom: 12,
+  },
+  cardDescription: {
+    fontSize: 12,
+    marginBottom: 12,
+  },
+  cardFooter: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });
