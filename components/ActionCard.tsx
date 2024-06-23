@@ -40,7 +40,8 @@ export default function ActionCard() {
               openWebsite(
                 'https://medium.com/@nitishprasad/react-native-folder-structure-e9ceab3150f3',
               )
-            }>
+            }
+            >
             <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -49,7 +50,8 @@ export default function ActionCard() {
               openWebsite(
                 'https://www.linkedin.com/in/mohammad-waliullah-658925254/',
               )
-            }>
+            }
+            >
             <Text style={styles.socialLinks}>Follow Me</Text>
           </TouchableOpacity>
         </View>
@@ -64,14 +66,51 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 8,
   },
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
+  card: {
+    width: 350,
+    height: 430,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16
+  },
+  elevatedCard: {
+    backgroundColor: '#EEEEEE',
+    elevation: 2,
+    shadowOffset: {
+      height: 1,
+      width: 1
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.5
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  headerText: {
+    fontSize: 16,
+    fontWeight: '500'
+  },
   cardImage: {
     height: 250,
+    marginBottom: 6
   },
-  bodyContainer: {},
-  footerContainer: {},
-  socialLinks: {},
+  bodyContainer: {
+    padding: 12
+  },
+  footerContainer: {
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
+  },
+  socialLinks: {
+    fontSize: 14,
+    backgroundColor: '#fff',
+    paddingHorizontal: 8,
+    paddingVertical: 6,
+    borderRadius: 20
+  },
 });

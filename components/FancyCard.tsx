@@ -1,7 +1,10 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View, Linking} from 'react-native';
 import React from 'react';
 
 export default function FancyCard() {
+  function goToGoogle(website) {
+    Linking.openURL(website);
+  }
   return (
     <View>
       <Text style={styles.headingText}>Trending Places</Text>
@@ -24,6 +27,7 @@ export default function FancyCard() {
             <Text>12 minutes away</Text>
             <Text>12 minutes away</Text>
           </View>
+          <TouchableOpacity  style={styles.buttonContainer}><Text onPress={goToGoogle('https://www.google.com')} style={styles.buttonText}>Add to Cart</Text></TouchableOpacity>
         </View>
       </View>
     </View>
@@ -38,7 +42,7 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 350,
-    height: 420,
+    height: 430,
     marginHorizontal: 16,
     marginVertical: 12,
     borderRadius: 6,
@@ -79,5 +83,16 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 30
   },
 });
